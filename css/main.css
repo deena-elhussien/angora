@@ -1,0 +1,649 @@
+:root{
+    --main-color: #343434;
+    /* --main-color-rgb:; */
+    --secondary-color: #748182;
+    --secondary-color-rgb: rgb(116, 129, 130);
+    --heading-font-family:"Montserrat", sans-serif;
+    --secondary-font-family:"Poppins", sans-serif;
+}
+html{
+    scroll-padding-top: 40px ;
+}
+section:not(.about){
+    padding: 80px 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+    font-family: var(--heading-font-family);
+    color: var(--main-color);
+}
+h2{
+    font-weight: 800;
+    font-size: 30px;
+    padding: 50px 0;
+    position: relative;
+}
+h2:not(.not)::after{
+    content: "";
+    position: absolute;
+    background-image: url(../imgs/dots.png);
+    background-repeat: repeat-x;
+    top: 85px;
+    left: 50%;
+    width: 16%;
+    height: 100px;
+    transform: translateX(-50%);
+    
+}
+.special{
+    color: #fff;
+}
+p{
+    font-family: var(--secondary-font-family);
+    color: var(--secondary-color);
+}
+
+
+
+/* start nav */
+.navbar li{
+    margin-inline: 10px;
+    font-family: var(--secondary-font-family);
+}
+.navbar-brand{
+    font-weight: 800;
+}
+.nav-link{
+    transition: all 0.5s;
+    position: relative;
+}
+.nav-link::after{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: var(--main-color);
+    top: 70%;
+    left: 10%;
+
+}
+.nav-link:hover{
+color: var(--secondary-color-rgb);
+
+}
+.nav-link:hover::after{
+    width: 50px;
+}
+/* .nav-item:active{
+    color: var(--main-color);
+} */
+/* end nav */
+
+/* start home */
+.home{
+    background-image: url(../imgs/bg.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+.layer{
+    min-height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.social-icons div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.3);
+    margin-right: 5px;
+}
+.social-icons div a{
+    color: #fff;
+}
+.title{
+    font-family: var(--heading-font-family);
+    line-height: 53px;
+}
+.title h5{
+    font-weight: 800;
+    font-size: 50px;
+    line-height: 55px;
+}
+.title h1{
+    font-weight: 200;
+    font-size: 44px;
+}
+
+.title h1::after {
+    font-size: 44px;
+    font-weight: 400;
+    
+    content: '|';
+    
+    animation: typing 3s infinite linear;
+  }
+
+@keyframes typing {
+    0% {
+        content: " |";
+    }
+
+    4% {
+        content: " L |";
+    }
+
+    8% {
+        content: " La|";
+    }
+
+    12% {
+        content: " Lar|";
+    }
+
+    16% {
+        content: " Larr|";
+    }
+
+    20% {
+        content: " Larry|";
+    }
+
+    24% {
+        content: " Larry D|";
+    }
+
+    28% {
+        content: " Larry Da|";
+    }
+
+    32% {
+        content: " Larry Dan|";
+    }
+
+    36% {
+        content: " Larry Dani |";
+    }
+
+    40% {
+        content: " Larry Danie|";
+    }
+
+    44% {
+        content: " Larry Daniel|";
+    }
+
+    48% {
+        content: " D|";
+    }
+
+    52% {
+        content: " De|";
+    }
+
+    56% {
+        content: " Dev|";
+    }
+
+    60% {
+        content: " Deve|";
+    }
+
+    64% {
+        content: " Devel|";
+    }
+
+    68% {
+        content: " Develo|";
+    }
+
+    72% {
+        content: " Develop|";
+    }
+
+    76% {
+        content: " Develope|";
+    }
+
+    80% {
+        content: " Developer|";
+    }
+
+    84% {
+        content: " D|";
+    }
+
+    87% {
+        content: " De|";
+    }
+
+    90% {
+        content: " Des|";
+    }
+
+    92% {
+        content: "Desi|";
+    }
+
+    93% {
+        content: "Desig|";
+    }
+
+    94% {
+        content: " Design|";
+    }
+
+    96% {
+        content: " Designe|";
+    }
+
+    100% {
+        content: " Designer|";
+    }
+
+}
+/* end home */
+
+/* start about */
+
+.about .photo{
+    position: relative;
+}
+.about .photo::after{
+    content: "";
+    position: absolute;
+    background-image: url(../imgs/dots.png);
+    background-repeat: repeat;
+    top: 80px;
+    left: 5%;
+    width: 70%;
+    height: 80%;
+    z-index: -1;
+}
+.about .description h2{
+    font-weight: 800;
+    font-size: 30px;
+    margin-bottom: 0;
+}
+
+.about .description span{
+    font-weight: 400;
+    color: #999999;
+    font-family: var(--secondary-font-family);
+    font-size: 14px;
+}
+.about .description p{
+    font-weight: 400;
+    font-size: 15px;
+    margin: 15px 0;
+}
+.about .description p span{
+    font-weight: 700;
+    color: #748182;
+}
+.about .progress{
+    margin-bottom: 20px;
+    box-shadow: inset #F7F7F7 10px 10px;
+    
+}
+.about .progress-bar{
+    background-color: var(--main-color);
+    text-align: start;
+    padding: 2px 10px;
+    font-family: var(--heading-font-family);
+    font-weight: 500;
+    font-size: 13px;
+    position: relative;
+}
+.about .progress-bar::after{
+    position: absolute;
+    content: "95%";
+    right: 0;
+    padding-right: 5px;
+    
+
+}
+.buttons{
+    font-family: var(--secondary-font-family);
+    padding-top: 20px;
+    
+}
+.buttons a{
+    all: unset;
+}
+.buttons .one{
+    background-color: var(--main-color);
+    color: #fff;
+    padding: 5px 25px;
+    font-size: 13px;
+    transition: all 0.5s;
+}
+.buttons .one:hover{
+    background-color: #fff;
+    color: var(--secondary-color);
+    border: 1px solid var(--main-color);
+}
+.buttons .two{
+    border: 1px solid var(--main-color);
+    color: var(--secondary-color);
+    padding: 5px 25px;
+    font-size: 13px;
+    transition: all 0.5s;
+}
+.buttons .two:hover{
+    background-color: var(--main-color);
+    color: #fff;
+
+}
+
+
+/* end about */
+
+/* start services */
+.services{
+    background-color: #F7F7F7;
+}
+.services .card .card-body .icon-circle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: #f4f4f4;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: all 0.5s;
+}
+.services .card .card-body h5{
+    font-weight: 800;
+    font-size: 18px;
+}
+.services .card .card-body p{
+    font-size: 14px;
+    line-height: 22px;
+}
+
+.services .card-body:hover .icon-circle{
+    background-color: var(--main-color);
+    color: #fff;
+}
+/* end services */
+
+/* start portfolio */
+.portfolio .nav-item button{
+    color: var(--main-color);
+    font-family: var(--heading-font-family);
+    font-weight: 700;
+    position: relative;
+    transition: all 0.5s;
+}
+.portfolio .nav-item button.active{
+    background-color: transparent;
+    color: var(--main-color);
+}
+.portfolio .nav-item button::after{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: var(--main-color);
+    top: 65%;
+    left: 30%;
+}
+.portfolio .nav-item button:hover::after{
+    width: 30px;
+}
+
+.portfolio .img {
+    position: relative;
+   
+}
+.portfolio .layout h6{
+   
+    font-size:12px;
+    font-weight:700;
+}
+.portfolio .img .layout{
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    width: calc(100%-5px);
+    height: calc(100%-5px);
+    background-color: rgba(255, 255, 255, 0.95);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.8s;
+    opacity: 0;
+}
+.portfolio .img:hover .layout{
+    opacity: 1;
+}
+
+.portfolio .ico{
+    
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: var(--main-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--main-color);
+    transition:all 0.5s;
+}
+.portfolio .ico:hover, .portfolio .ico:hover i{
+    background-color: #fff;
+    color: var(--main-color);
+   
+}
+.portfolio .ico i{
+    font-size: 10px;
+    color: #fff;
+}
+/* end portfolio */
+
+/* start clients */
+.clients{
+    background-color: #F7F7F7;
+}
+.carousel-item img{
+    width: 100px;
+    height: 100px;
+}
+.carousel-item p{
+    font: 15px;
+}
+
+.carousel-item span{
+    font-family: var(--secondary-font-family);
+    color: var(--secondary-color);
+    font-weight: 600;
+    font-size: 12px;
+}
+.clients .carousel-indicators button{
+    all: unset;
+    background-color: #d6d6d6 ;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 10px;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+.clients .carousel-indicators button.active{
+    background-color: #869791;
+
+}
+.clients .carousel-indicators button:hover{
+    background-color: #869791;
+}
+
+
+/* end clients */
+
+/* start statistical */
+
+.statistical h6{
+    font-weight: 900;
+    font-size: 30px;
+}
+.statistical p{
+    font-weight: 600;
+    font-size: 15px;
+}
+/* end statistical */
+
+/* start team */
+.team{
+    background-color: #F7F7F7;
+}
+.team .card-body{
+    font-family: var(--heading-font-family);
+    background-color: #5A5A5A;
+    color: #fff;
+}
+.team .card-body h4{
+    font-weight: 500;
+}
+.team .card-body h5{
+    font-weight: 700;
+}
+.team .imgg .social{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10%;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: var(--main-color);
+    color: #fff;
+    transform: rotateY(-180deg);
+}
+
+.team .imgg{
+    position: relative;
+    
+}
+.team .card{
+    transition: all 0.5s;
+    border-radius: 0 0 5px 5px;
+}
+.team .imgg .layers{
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    width: calc(100%-5px);
+    height: calc(100%-5px);
+    background-color: rgba(255, 255, 255, 0.95);
+    /* transform: rotateY(0); */
+    
+    transition: all 0.5s;
+    opacity: 0;
+}
+.team .card:hover .layers{
+    opacity: 1;
+    transform: rotateY(180deg);
+}
+.team .card img{
+    transition: all 0.5s;
+    display: block;
+}
+.team .card .imgg:hover img{
+    transform: scale(1.1);
+}
+/* .team .imgg:hover .social{
+    transform: rotateY(-360deg);
+} */
+.team .social{
+    transition: all 0.5s;
+    border: 1px solid var(--main-color);
+}
+.team .social:hover{
+    background-color: #fff;
+    color: var(--main-color);
+}
+/* end team */
+
+/* start contact */
+.contact .social-contact{
+    background-color: #F4F4F4;
+    color: var(--main-color);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: all 0.5s;
+}
+
+.contact .contact-me h5{
+    font-weight: 700;
+}
+.contact .contact-me p{
+    font-size: 15px;
+}
+.contact .social-contact a{
+    all: unset;
+}
+.contact .contact-me:hover .social-contact{
+    background-color: var(--main-color);
+    color: #fff ;
+}
+.inputs input{
+    width: 49%;
+    font-family: var(--secondary-font-family);
+}
+textarea{
+    font-family: var(--secondary-font-family);
+}
+.form-control{
+    background-color: #F4F4F4;
+    border: transparent;
+}
+ .form-control:focus{
+    border: transparent;
+     outline: none; 
+    box-shadow: none;
+     background-color: #F4F4F4; 
+} 
+button.vip{
+    background-color: var(--main-color);
+    color:#fff;
+    font-size: 13px;
+    
+    font-family: var(--secondary-font-family);
+    padding: 5px 30px;
+    transition: all 0.5s;
+    margin-bottom: 50px;
+    
+}
+button.vip:hover{
+    background-color: #fff;
+    color: var(--main-color);
+    border: 1px solid var(--main-color);
+
+}
+
+/* end contact */
+
+.footer p{
+    color: var(--secondary-color);
+    font-size: 14px;
+}
